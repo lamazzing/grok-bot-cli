@@ -4,6 +4,13 @@
 
 Manage [Grok Bot](https://cursor.com/help/grok-bot/plans) agents, groups, and messages from your terminal.
 
+> **About this fork.** It is [ScriptedAlchemy/grok-bot-cli](https://github.com/ScriptedAlchemy/grok-bot-cli) v0.12.5 plus fixes for the Grok Bot 1.1 app, offered upstream as pull requests:
+> - sends through the Cursor backend ([upstream #166](https://github.com/ScriptedAlchemy/grok-bot-cli/pull/166), by its author), fixing `sendPrompt failed: 502 A Sand box session is not permitted`;
+> - sends the gateway port token, fixing `404 The request could not be routed` on every command;
+> - saves `bots update` profile edits and creates groups through the backend, fixing descriptions that revert and `groups create` failing with the same 502.
+>
+> Install the build from this fork's [latest release](https://github.com/lamazzing/grok-bot-cli/releases/latest) (`npm install -g <tarball URL>`). Once upstream merges these, use the npm package again. These calls are the Grok Bot app's own internal APIs, which can change with any app update.
+
 ![Live create, group, send, and delete smoke test](https://raw.githubusercontent.com/ScriptedAlchemy/grok-bot-cli/main/demo/grok-bot-cli-demo.gif)
 
 [Watch the MP4](https://github.com/ScriptedAlchemy/grok-bot-cli/blob/main/demo/grok-bot-cli-demo.mp4)
